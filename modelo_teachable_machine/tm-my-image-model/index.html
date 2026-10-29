@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Teachable Machine - Clasificador perros/gatos/pájaros</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Clasificador: perros / gatos / pájaros</h1>
+    <div class="controls">
+      <input id="image-input" type="file" accept="image/*" />
+      <button id="predict-btn">Predecir imagen</button>
+    </div>
+    <div class="preview">
+      <canvas id="canvas" width="320" height="240"></canvas>
+    </div>
+    <section id="results">
+      <h2>Resultados</h2>
+      <ul id="pred-list"></ul>
+    </section>
+    <footer>
+      <p>Modelo cargado desde los ficheros exportados de Teachable Machine.</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
